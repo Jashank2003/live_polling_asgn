@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import io from "socket.io-client";
 
-const socket = io("http://localhost:5000"); // Replace with your backend URL
+const socket = io("https://lpabcknd.onrender.com:5000"); // Replace with your backend URL
 
 function StudentPollPage() {
   const [question, setQuestion] = useState(null);
