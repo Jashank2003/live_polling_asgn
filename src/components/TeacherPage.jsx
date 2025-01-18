@@ -31,7 +31,7 @@ function TeacherPage() {
     if (!question.trim() || options.some((o) => !o.value.trim())){
       console.log("there is no question"); 
       return
-    };
+    }
 
     socket.emit("askQuestion", { question, options });
     console.log("asking question -->", question, options);
