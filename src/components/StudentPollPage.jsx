@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import io from "socket.io-client";
 
-const socket = io("https://lpabcknd.onrender.com:5002"); 
+const socket = io("https://lpabcknd.onrender.com"); 
 
 function StudentPollPage() {
   const [question, setQuestion] = useState(null);
