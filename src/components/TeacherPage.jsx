@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import io from "socket.io-client";
 
-const socket = io("https://lpabcknd.onrender.com:5000");
+const socket = io("https://lpabcknd.onrender.com:5001");
 
 function TeacherPage() {
   const [question, setQuestion] = useState("");

@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import io from "socket.io-client";
 
-const socket = io("https://lpabcknd.onrender.com:5000"); // Replace with your backend URL
+const socket = io("https://lpabcknd.onrender.com:5001"); // Replace with your backend URL
 
 function StudentPollPage() {
   const [question, setQuestion] = useState(null);
@@ -21,6 +21,7 @@ function StudentPollPage() {
       setCanVote(true);
       setTimer(60);
       setTimeout(() => setCanVote(false), 60000); // 60-second voting window
+      
     });
 
     socket.on("updateResults", (data) => setResults(data));
