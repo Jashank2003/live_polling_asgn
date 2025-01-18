@@ -28,13 +28,9 @@ function TeacherPage() {
   };
 
   const askQuestion = () => {
-    if (!question.trim() || options.some((o) => !o.value.trim())){
-      console.log("there is no question"); 
-      return;
-    }
+    if (!question.trim() || options.some((o) => !o.value.trim())) return;
 
     socket.emit("askQuestion", { question, options });
-    console.log("asking question -->", question, options);
     setCanAsk(false);
     setShowResults(true);
     setTimer(60);
